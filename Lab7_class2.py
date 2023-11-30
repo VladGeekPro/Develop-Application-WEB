@@ -1,6 +1,16 @@
-from datetime import datetime 
+from datetime import datetime
 
-class Employee:
+class Departament:
+  def __init__(self, nameDepartament, managerDepartament):
+    self.nameDepartament = nameDepartament
+    self.managerDepartament = managerDepartament
+
+  def viewEmployeesList(self, employeeList):
+    print("Employees list:")
+    for employee in employeeList:
+      print(f"- {employee} ")
+
+class Employee(Departament):
   def __init__(self, nameEmployee, phone, bday, email, position):
     self.__nameEmployee = nameEmployee
     self.__phone = phone
